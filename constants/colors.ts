@@ -1,32 +1,31 @@
-//HERE IS THE COLOR SCHEME OF THE APP
 export const COLORS = {
   //Background
-  pinkBack: "#f58bd7",
-  gradientStart: "#f58bd7",
-  gradientEnd: "#c2185b",
+  pinkBack: "#1d2d44",
+  gradientStart: "#0d1321",
+  gradientEnd: "#1d2d44",
   //Text Color
-  whiteText: "#ffffff",
-  darkText: "#2d3748",
+  whiteText: "#f0ebd8",
+  darkText: "#0d1321",
   //Shadow Color
-  blackShadow: "#000000",
+  blackShadow: "#0d1321",
   //Border Color
-  blackBorder: "#000000",
-  lightBorder: "#e2e8f0",
+  blackBorder: "#0d1321",
+  lightBorder: "#748cab",
   //Tab Background Color
-  tabBackground: "#000000",
+  tabBackground: "#0d1321",
   //Active Tab Icon Color
-  activeTabIconColor: "#ffffff",
+  activeTabIconColor: "#f0ebd8",
   //Inactive Tab Icon Color
-  inactiveTabIconColor: "#f58bd7",
+  inactiveTabIconColor: "#3e5c76",
   //Accent Colors
-  primary: "#f58bd7",
-  secondary: "#4a5568",
-  success: "#48bb78",
-  warning: "#ed8936",
-  error: "#f56565",
+  primary: "#3e5c76",
+  secondary: "#748cab",
+  success: "#748cab",
+  warning: "#f0ebd8",
+  error: "#1d2d44",
   //Card Background
-  cardBackground: "#ffffff",
+  cardBackground: "#1d2d44",
   //Button Colors
-  buttonPrimary: "#f58bd7",
-  buttonSecondary: "#4a5568",
+  buttonPrimary: "#3e5c76",
+  buttonSecondary: "#748cab",
 };
