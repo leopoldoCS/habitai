@@ -1,6 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { ReactNode } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { COLORS } from "../constants/colors";
 
 type ScreenLayoutProps = {
@@ -9,21 +10,20 @@ type ScreenLayoutProps = {
 };
 
 export default function ScreenLayout({ title, children }: ScreenLayoutProps) {
+  const insets = useSafeAreaInsets();
+
   return (
     <LinearGradient
       colors={[COLORS.gradientStart, COLORS.gradientEnd]}
       style={styles.container}
     >
-      {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
         <Text style={styles.headerText}>{title}</Text>
       </View>
 
-      {/* Main content */}
       <View style={styles.content}>
         {children}
       </View>
-
     </LinearGradient>
   );
 }
@@ -33,13 +33,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    height: 100,
+    paddingBottom: 10,
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 40, // Account for status bar
   },
   headerText: {
-    fontSize: 32,
+    fontSize: 26,
     fontWeight: "bold",
     color: COLORS.whiteText,
     textShadowColor: COLORS.blackShadow,
@@ -48,12 +47,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    paddingHorizontal: 20,
-  },
-  text: {
-    fontSize: 24,
   },
 });
 
