@@ -4,7 +4,6 @@ import { COLORS } from "../../constants/colors";
 
 //Icons
 import { Ionicons } from "@expo/vector-icons";
-import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
 
 export default function TabLayout() {
@@ -62,13 +61,13 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* AI Tab */}
+      {/* Insights Tab */}
       <Tabs.Screen
         name="ai"
         options={{
-          title: "AI",
+          title: "Insights",
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="robot" size={30} color={color} />
+            <Ionicons name="bulb" size={30} color={color} />
           ),
         }}
       />
